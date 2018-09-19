@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct q_sort_with_one_attribute
+{
+	char a[100];
+};
+typedef struct q_sort_with_one_attribute q;
+struct n_qsorts
+{
+	q sort[100];
+	int n;
+};
+void output(struct n_qsorts k)
+{
+	printf("The names are\n");
+	for(int i=0;i<k.n;i++)
+	{
+		printf("%s\n",k.sort[i].a);
+	}
+}
+struct n_qsorts input()
+{
+	struct n_qsorts k;
+	printf("Enter the number of names you want enter\n");
+	scanf("%d",&k.n);
+	printf("Enter %d strings\n",k.n);
+	for(int i=0;i<k.n;i++)
+	{
+		scanf("%s",k.sort[i].a);
+	}
+	return k;
+}
+void main()
+{
+	struct n_qsorts k;
+	k=input();
+	output(k);
+}
