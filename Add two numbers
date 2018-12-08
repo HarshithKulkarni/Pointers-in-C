@@ -1,6 +1,6 @@
 #include<stdio.h>
 int compute(int *a,int *b);
-int comute(int *a,int *b)
+int compute(int *a,int *b)
 {
     int sum;
     sum=*a + *b;
